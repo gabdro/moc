@@ -1,0 +1,25 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+<!-- Load c3.css -->
+<link href="/static/css/c3.css" rel="stylesheet" type="text/css">
+
+<!-- Load d3.js and c3.js -->
+<script src="/static/js/d3.v3.min.js" charset="utf-8"></script>
+<script src="/static/js/c3.js"></script>
+<body>
+<div id="chart"></div>
+<script>
+var chart = c3.generate({
+    data: {
+        columns: {{ columns }}
+    }
+});
+</script>
+</body>
+</html>
+
+{% endblock %}
